@@ -1,12 +1,25 @@
 pipeline{
     agent any
     stages {
-        stage('Hello'){
+        stage('Build'){
             steps{
-                echo "from dev branch"
+                echo "build from dev branch"
         }
 
         }
+    stage('test'){
+            steps{
+                echo "test from dev branch"
+        }
+
+        }
+
+    stage('deploy'){
+            steps{
+                echo "deploy from dev branch"
+        }
+
+        }        
         
     }
 }
